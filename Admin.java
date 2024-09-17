@@ -125,6 +125,7 @@ class Professor {
 
         CourseAssignment assignment = new CourseAssignment();
         assignment.assignProfessor(course, professor);
+        sc.close();
     }
 
     private void viewCourses() {
@@ -132,6 +133,11 @@ class Professor {
         catalog.addCourse("Mathematics");
         catalog.addCourse("Physics");
         catalog.viewCourses();
+    }
+
+    public void select_option() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'select_option'");
     }
 }
 

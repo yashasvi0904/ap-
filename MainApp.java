@@ -14,14 +14,13 @@ public class MainApp {
             //     student.display();
             //     break;
             case "professor":
-                Professor professor = new Professor();
-                professor.select();
-                
+                Professor1 professor = new Professor1();
+                professor.select_option();
                 break;
-            // case "admin":
-            //     Admin admin = new Admin();
-            //     admin.display();
-            //     break;
+            case "admin":
+                Admin admin = new Admin();
+                admin.select();
+                break;
             default:
                 System.out.println("Invalid role! Please try again.");
                 break;
@@ -30,4 +29,3 @@ public class MainApp {
         scanner.close();
     }
 }
-
