@@ -9,10 +9,10 @@ public class MainApp {
         String role = scanner.nextLine().toLowerCase(); // Convert to lowercase for easier comparison
 
         switch (role) {
-            // case "student":
-            //     Student student = new Student();
-            //     student.display();
-            //     break;
+            case "student":
+                Main student = new Main();
+                Main.Stud1();
+                break;
             case "professor":
                 Professor1 professor = new Professor1();
                 professor.select_option();
