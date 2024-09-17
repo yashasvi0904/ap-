@@ -32,7 +32,7 @@ class course{
         this.schedule = schedule;
 
     }
-    public String getCourseCode() {
+    public String getcourse_code() {
         return courseCode;
     }
 
@@ -57,7 +57,7 @@ class course{
     }
 
 
-    public void viewCourseDetails() {
+    public void viewCourse() {
         System.out.println("Course Code: " + courseCode);
         System.out.println("Title: " + title);
         System.out.println("Professor: " + professor);
@@ -66,5 +66,24 @@ class course{
         System.out.println("Schedule: " + schedule);
     }
 }
+class student extend user{
+    private int student_id;
+    private int curr_semester;
+    private int cgpa;
+    private int gpa;
+    private int sgpa;
+
+    public void student(int student_id,int curr_semester,int cgpa,int gpa, int sgpa){
+        this.student_id= student_id;
+        this.curr_semester=curr_semester;
+        this.cgpa= cgpa;
+        this.gpa= gpa;
+        this.sgpa=sgpa;
+    }
+    public void view_available_course(ArrayList<{
+        for( course: Course){
+            course.viewCourse;
+        
+    
 
 
