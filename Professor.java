@@ -75,22 +75,25 @@ import java.util.Scanner;
     public class Professor {
         static List<Course> courses = new ArrayList<>();
         static List<Student> students = new ArrayList<>();
+    
+        // Constructor to initialize the courses and students
+        public Professor() {
+            if (courses.isEmpty()) {
+                courses.add(new Course("Computer Science 101", "Intro to Programming", "Mon-Wed 10 AM", 3,
+                        "None", 30, "Tue 2-4 PM"));
+                courses.add(new Course("Computer Science 201", "Algorithms", "Mon-Wed 3 PM", 3, "CS 101", 30,
+                        "Tue 3-5 PM"));
+                courses.add(new Course("Computer Science 301", "Data Structures", "Mon-Wed 5 PM", 3, "CS 201", 30,
+                        "Tue 5-7 PM"));
+    
+                students.add(new Student("Yashasvi", "Good", "1234567890"));
+                students.add(new Student("Sarthak", "Good", "1234567890"));
+                students.add(new Student("Shreyas", "Good", "1234567890"));
+            }
+        }
 
-        public static void main(String[] args) {
-            courses.add(new Course("Computer Science 101", "Intro to Programming", "Mon-Wed 10 AM", 3,
-                    "None", 30, "Tue 2-4 PM"));
-
-            courses.add(new Course("Computer Science 201", "Algorithms", "Mon-Wed 3 PM", 3, "Computer Science 101", 30,
-                    "Tue 3-5 PM"));
-
-            courses.add(
-                    new Course("Computer Science 301", "Data Structures", "Mon-Wed 5 PM", 3, "Computer Science 201", 30,
-                            "Tue 5-7 PM"));
-
-            students.add(new Student("Yashasvi", "Good", "1234567890"));
-            students.add(new Student("Sarthak", "Good", "1234567890"));
-            students.add(new Student("Shreyas", "Good", "1234567890"));
-
+        public void select()
+        {
             Scanner sc = new Scanner(System.in);
             System.out.println("Select the option");
             System.out.println("1. Edit Course");
@@ -111,6 +114,7 @@ import java.util.Scanner;
             if (option == 3) {
                 System.exit(0);
             }
+            sc.close();
         }
     
 
